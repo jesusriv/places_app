@@ -9,4 +9,10 @@ export const LandingButton = styled.button`
     background: none;
     border: 2px solid white;
     border-radius: 15px;
+
+    &:hover {
+        background-color: #fff;
+        color: #181818;
+        cursor: pointer;
+    }
 `;

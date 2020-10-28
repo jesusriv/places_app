@@ -1,5 +1,5 @@
 import { LandingStyle } from './landingStyles';
-import { LandingButton } from '../components/Button/buttonStyles';
+import { LandingButton } from '../../components/Button/buttonStyles';
 
 export const Landing = () => {
     return (
