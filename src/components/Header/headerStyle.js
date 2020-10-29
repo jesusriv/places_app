@@ -12,9 +12,8 @@ export const HeaderStyle = styled.div`
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-
     ${media.desktop} {
-        padding: 25px 150px;
+        padding: 25px 60px;
     }
 
     h2 {
@@ -30,4 +29,6 @@ export const HeaderStyle = styled.div`
             font-size: 22px;
         }
     }
+    
+
 `;

@@ -64,3 +64,19 @@ export const AppleButton = styled.button`
         right: 5px;
     }
 `;
+
+export const CurrentLocation = styled.button`
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+`;
+
+export const NewPin = styled(CurrentLocation)`
+    bottom: 90px;
+`;
