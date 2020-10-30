@@ -4,6 +4,10 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+import mapboxgl from 'mapbox-gl';
+mapboxgl.accessToken = 'pk.eyJ1Ijoicmplc3VzMDciLCJhIjoiY2s2Nmw5dWFlMDV2ZTNmb2JxbTdpbTA3NCJ9.ySXTP1ULKrPOoHQrkaNRHw';
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

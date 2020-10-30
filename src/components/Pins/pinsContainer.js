@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import Pin from '../../components/Pins/pins';
+import data from '../../data/places';
 
 const media = {
     desktop: '@media(min-width: 700px)'
 }
 
-export const PinsContainer = styled.div`
+const PinsWrapper = styled.div`
     width: 100%;
     height: 90%;
     background-color: #fff;
@@ -21,3 +23,32 @@ export const PinsContainer = styled.div`
         flex-wrap: wrap;
     }
 `;
+
+const OuterContainer = () => {
+    return (
+        <PinsWrapper>
+            {data.map((p, i) => {
+                return (
+                    <Pin
+                        key={i}
+                        location={p.location}
+                        body={p.body}
+                        date={p.date}
+                        img={p.img}
+                    />
+                );
+            })}
+        </PinsWrapper>
+    );
+};
+
+const Pins = ({ handlePins, viewPins }) => {
+    return (
+        <div className={!viewPins ? 'closed outer' : 'outer'}>
+            <hr onClick={() => handlePins(!viewPins)} />
+            <OuterContainer />
+        </div>
+    );
+}
+
+export default Pins;

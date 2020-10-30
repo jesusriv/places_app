@@ -1,7 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-import map from '../../assets/map-test.png'
-
 const media = {
     tablet: '@media(min-width: 500px)',
     tabletLandscape: '@media(max-height: 800px)',
@@ -11,14 +9,10 @@ const media = {
 export const DashboardStyle = styled.div`
     width: 100%;
     height: 100vh;
-    background-image: url('${map}');
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    top: -2px;
-    left: -2px;
+
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     nav {
         background-color: #282828;
@@ -28,7 +22,7 @@ export const DashboardStyle = styled.div`
         padding: 15px 5px; 
         border-radius: 5px;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-        
+        z-index: 2;
         p {
             font-size: 14px;
             color: #fff;
@@ -86,13 +80,14 @@ export const DashboardStyle = styled.div`
         top: 65%;
         transition: .6s linear all;
 
-        ${media.desktop} {
-            top: 73%;
-        }
-
         ${media.tabletLandscape} {
             top: 63%;
         }
+
+        ${media.desktop} {
+            top: 70%;
+        }
+
     }
 `;
 

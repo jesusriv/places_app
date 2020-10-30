@@ -6,7 +6,7 @@ const media = {
     desktop: '@media(min-width: 700px)'
 }
 
-export const SearchBar = styled.input.attrs(props => ({
+const SearchBar = styled.input.attrs(props => ({
     type: 'text'
 }))`
     margin: 20px;
@@ -21,7 +21,7 @@ export const SearchBar = styled.input.attrs(props => ({
     background-position: 10px 15px;
     font-size: 18px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    
+
     ::placeholder {
         font-size: 18px;
     }
@@ -36,3 +36,19 @@ export const SearchBar = styled.input.attrs(props => ({
         margin-top: 40px;
     }
 `;
+
+const formStyle = {
+    width: '100%',
+    margin: '0 auto',
+    zIndex: 2,
+}
+
+const SearchForm = () => {
+    return (
+        <form style={formStyle}>
+            <SearchBar placeholder="City, state, etc." />
+        </form>
+    );
+}
+
+export default SearchForm;
